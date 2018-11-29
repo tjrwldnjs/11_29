@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "keyword.h"
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
@@ -73,11 +74,10 @@ int main(int argc, char *argv[]) {
 	//word reading
 	while (fgetc_word(fp, word) != 0)
 	{
-		//word processing
-		printf("%s\n", word); //test code
+		count_word(word); // word processing
 	}
 
-	printf("%c\n", fgetc(fp));
+	print_word();
 	
 	//fclose
 	fclose(fp);
